@@ -1,0 +1,19 @@
+
+---
+
+## 5. **simple-interest.sh**
+```bash
+#!/bin/bash
+# simple-interest.sh - Script to calculate Simple Interest
+
+if [ $# -ne 3 ]; then
+  echo "Usage: $0 <Principal> <Rate> <Time>"
+  exit 1
+fi
+
+P=$1
+R=$2
+T=$3
+
+SI=$((P * R * T / 100))
+echo "Simple Interest = $SI"
